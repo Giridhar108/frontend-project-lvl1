@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/Giridhar108/frontend-project-lvl1.git"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Giridhar108/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/Giridhar108/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/Giridhar108/frontend-project-lvl1#readme",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
 }
