@@ -1,8 +1,3 @@
-name: Super-Linter
-
-# Run this workflow every time a new commit pushed to your repository
-on: push
-
 # Name of workflow
 name: Node CI
 
@@ -50,8 +45,3 @@ jobs:
         # https://github.com/paambaati/codeclimate-action
         uses: paambaati/codeclimate-action@v2.7.4
         # Add Code Climate secret key
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageCommand: make test-coverage
-          debug: true
