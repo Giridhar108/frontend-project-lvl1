@@ -17,7 +17,7 @@ export default async function head(logic, rule, ifAnswers) {
         console.log(`Congratulations, ${name}!`);
       }
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ifAnswers(num)}'.\nLet\'s try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ifAnswers(num)}'.\nLet's try again, ${name}!`);
       i += 3;
     }
   } while (i <= 2);
