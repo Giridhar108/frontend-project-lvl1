@@ -1,25 +1,29 @@
-export const getRandomInt = (max = 10) => {
+const maxNumber = 10
+const stepAndLengthNumbers = 8
+const minStep = 2
+const minLength = 5
+export const getRandomInt = (max = maxNumber) => {
   const arr = [];
-  const a = Math.floor(Math.random() * Math.floor(max));
-  const b = Math.floor(Math.random() * Math.floor(8)) + 2;
-  const length = Math.floor(Math.random() * Math.floor(8)) + 5;
+  const firstNumberArr = Math.floor(Math.random() * Math.floor(max));
+  const stepArray = Math.floor(Math.random() * Math.floor(stepAndLengthNumbers)) + minStep;
+  const length = Math.floor(Math.random() * Math.floor(stepAndLengthNumbers)) + minLength;
 
   while (arr.length <= length) {
-    arr.push(a);
+    arr.push(firstNumberArr);
   }
   const prog = (array, y) => {
-    let d = y;
-    const bArray = array;
+    let step = y;
+    const forEslintArray = array;
     for (let i = 0; i < array.length; i += 1) {
-      bArray[i] += d;
-      d += y;
+      forEslintArray[i] += step;
+      step += y;
     }
-    return array;
+    return forEslintArray;
   };
 
-  const result = prog(arr, b);
-  const variable = result[length - 3];
-  return result.join(' ').replace(variable, '..');
+  const result = prog(arr, stepArray);
+  const variableLength = result[length - 3];
+  return result.join(' ').replace(variableLength, '..');
 };
 
 export const rule = () => console.log('What number is missing in the progression?');

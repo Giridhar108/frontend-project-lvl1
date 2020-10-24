@@ -1,26 +1,30 @@
-export const getRandomInt = (max = 108) => {
-  const a = Math.floor(Math.random() * Math.floor(max));
-  const b = Math.floor(Math.random() * Math.floor(max));
-  const c = Math.floor(Math.random() * Math.floor(9));
-  let d = '*';
-  if (c <= 3) {
-    d = '+';
-  } else if (c >= 7) {
-    d = '-';
+const maxNumbers = 108;
+const foOperandRandom = 9;
+export const getRandomInt = (max = maxNumbers) => {
+  const firstOperand = Math.floor(Math.random() * Math.floor(max));
+  const secondOperand = Math.floor(Math.random() * Math.floor(max));
+  const operandRandom = Math.floor(Math.random() * Math.floor(foOperandRandom));
+  let operand = '*';
+  if (operandRandom <= 3) {
+    operand = '+';
+  } else if (operandRandom >= 7) {
+    operand = '-';
   }
-  const result = `${a} ${d} ${b}`;
+  const result = `${firstOperand} ${operand} ${secondOperand}`;
   return result;
 };
+
 export const rule = () => console.log('What is the result of the expression?');
+
 export const ifAnswers = (n) => {
-  const num = n.split(' ');
-  const a = +num[0];
-  const d = num[1];
-  const b = +num[2];
-  if (d === '*') {
-    return (a * b).toString();
-  } if (d === '+') {
-    return (a + b).toString();
+  const numbers = n.split(' ');
+  const firstOperand = +numbers[0];
+  const operand = numbers[1];
+  const secondOperand = +numbers[2];
+  if (operand === '*') {
+    return (firstOperand * secondOperand).toString();
+  } if (operand === '+') {
+    return (firstOperand + secondOperand).toString();
   }
-  return (a - b).toString();
+  return (firstOperand - secondOperand).toString();
 };
