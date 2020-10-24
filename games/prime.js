@@ -1,7 +1,7 @@
-const numberOfPrimes = 19
-const maxNumberRandom = 107
-const variable = 2
-export const getRandomInt = (max = numberOfPrimes ) => {
+const numberOfPrimes = 19;
+const maxNumberRandom = 107;
+const variable = 2;
+export const getRandomInt = (max = numberOfPrimes) => {
   const chosePrime = Math.floor(Math.random() * Math.floor(max));
   const variableBetweenPrimeNotPrime = Math.floor(Math.random() * Math.floor(variable));
   const maxNumber = Math.floor(Math.random() * Math.floor(maxNumberRandom)) + 1;

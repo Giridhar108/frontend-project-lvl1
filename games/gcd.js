@@ -1,4 +1,4 @@
-const maxNumber = 108
+const maxNumber = 108;
 export const getRandomInt = (max = maxNumber) => {
   const firstNumber = Math.floor(Math.random() * Math.floor(max));
   const secondNumber = Math.floor(Math.random() * Math.floor(max));

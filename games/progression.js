@@ -1,7 +1,7 @@
-const maxNumber = 10
-const stepAndLengthNumbers = 8
-const minStep = 2
-const minLength = 5
+const maxNumber = 10;
+const stepAndLengthNumbers = 8;
+const minStep = 2;
+const minLength = 5;
 export const getRandomInt = (max = maxNumber) => {
   const arr = [];
   const firstNumberArr = Math.floor(Math.random() * Math.floor(max));
