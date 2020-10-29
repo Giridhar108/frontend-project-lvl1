@@ -17,7 +17,7 @@ export const getCondition = (max = numberOfPrimes) => {
 
 export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export function ifAnswers(num, answer) {
+export const ifAnswers = (num, answer) => {
   const result = {};
   if (num < 2) {
     result.answer = 'no';
@@ -40,6 +40,6 @@ export function ifAnswers(num, answer) {
     result.bool = (false);
   }
   return result;
-}
+};
 
 export default () => startGame(getCondition, ifAnswers, description);

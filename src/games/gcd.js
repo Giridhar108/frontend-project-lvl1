@@ -22,13 +22,10 @@ export const ifAnswers = (numbers, answer) => {
   }
 
   result.answer = mygcd(one, two).toString();
-  // return mygcd(one, two).toString();
   if (result.answer === answer) {
     result.bool = (true);
-    return result;
   } if (result.answer !== answer) {
     result.bool = (false);
-    return result;
   }
   return result;
 };

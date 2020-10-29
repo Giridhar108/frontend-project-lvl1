@@ -46,10 +46,8 @@ export const ifAnswers = (n, answer) => {
 
   if (result.answer === answer) {
     result.bool = (true);
-    return result;
   } if (result.answer !== answer) {
     result.bool = (false);
-    return result;
   }
   return result;
 };
