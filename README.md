@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 ![Actions Status](https://github.com/Giridhar108/frontend-project-lvl1/workflows/NodeCI/badge.svg)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/33e175a02cf339b2bb95/maintainability)](https://codeclimate.com/github/Giridhar108/frontend-project-lvl1/maintainability)
 
 
 

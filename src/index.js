@@ -1,23 +1,30 @@
 import promptly from 'promptly';
 
-export default async function head(logic, rule, ifAnswers) {
+export default async function startGame(logic, ifAnswers, description) {
   const namePlayer = await promptly.prompt('May I have your name?');
   console.log(`Nice to meet you, ${namePlayer}`);
-  rule();
-  let i = 0;
+  console.log(description);
+  let rounds = 3;
   do {
     const numbers = logic();
     console.log(`Question ${numbers}`);
     const answer = await promptly.prompt('You answer:');
-    if (answer === ifAnswers(numbers)) {
+    const trueAnswer = ifAnswers(numbers, answer);
+    if (trueAnswer.bool) {
       console.log('correct!');
-      i += 1;
-      if (i === 3) {
+      rounds -= 1;
+      if (rounds === 0) {
         console.log(`Congratulations, ${namePlayer}!`);
       }
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ifAnswers(numbers)}'.\nLet's try again, ${namePlayer}!`);
-      i += 3;
+      let notCorrectAnswer = trueAnswer.answer;
+      if (answer === 'no') {
+        notCorrectAnswer = 'yes';
+      } else if (answer === 'yes') {
+        notCorrectAnswer = 'no';
+      }
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${notCorrectAnswer}'.\nLet's try again, ${namePlayer}!`);
+      break;
     }
-  } while (i <= 2);
+  } while (rounds !== 0);
 }

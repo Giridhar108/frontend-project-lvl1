@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import name from '../src/index.js';
-import { getRandomInt, rule, ifAnswers } from '../games/prime.js';
+import startGame from '../src/games/prime.js';
 
-name(getRandomInt, rule, ifAnswers);
+startGame();
