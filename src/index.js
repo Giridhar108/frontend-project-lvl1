@@ -1,12 +1,12 @@
 import promptly from 'promptly';
 
-export default async function startGame(logic, ifAnswers, description) {
+export default async function startGame(takeQuestion, ifAnswers, description) {
   const namePlayer = await promptly.prompt('May I have your name?');
   console.log(`Nice to meet you, ${namePlayer}`);
   console.log(description);
   let rounds = 3;
   do {
-    const numbers = logic();
+    const numbers = takeQuestion();
     console.log(`Question ${numbers}`);
     const answer = await promptly.prompt('You answer:');
     const trueAnswer = ifAnswers(numbers, answer);
@@ -17,13 +17,13 @@ export default async function startGame(logic, ifAnswers, description) {
         console.log(`Congratulations, ${namePlayer}!`);
       }
     } else {
-      let notCorrectAnswer = trueAnswer.answer;
+      let сorrectAnswer = trueAnswer.answer;
       if (answer === 'no') {
-        notCorrectAnswer = 'yes';
+        сorrectAnswer = 'yes';
       } else if (answer === 'yes') {
-        notCorrectAnswer = 'no';
+        сorrectAnswer = 'no';
       }
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${notCorrectAnswer}'.\nLet's try again, ${namePlayer}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${сorrectAnswer}'.\nLet's try again, ${namePlayer}!`);
       break;
     }
   } while (rounds !== 0);

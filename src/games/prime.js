@@ -4,7 +4,7 @@ import randomizer from '../../utils/randomizer.js';
 const numberOfPrimes = 19;
 const maxNumberRandom = 107;
 const variable = 2;
-export const getCondition = (max = numberOfPrimes) => {
+export const getQuestion = (max = numberOfPrimes) => {
   const chosePrime = randomizer(max);
   const variableBetweenPrimeNotPrime = randomizer(variable);
   const maxNumber = randomizer(maxNumberRandom) + 1;
@@ -42,4 +42,4 @@ export const ifAnswers = (num, answer) => {
   return result;
 };
 
-export default () => startGame(getCondition, ifAnswers, description);
+export default () => startGame(getQuestion, ifAnswers, description);

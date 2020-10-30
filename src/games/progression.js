@@ -6,7 +6,7 @@ const stepAndLengthNumbers = 8;
 const minStep = 2;
 const minLength = 5;
 
-export const getCondition = (max = maxNumber) => {
+export const getQuestion = (max = maxNumber) => {
   const arr = [];
   const firstNumberArr = randomizer(max);
   const stepArray = randomizer(stepAndLengthNumbers) + minStep;
@@ -52,4 +52,4 @@ export const ifAnswers = (n, answer) => {
   return result;
 };
 
-export default () => startGame(getCondition, ifAnswers, description);
+export default () => startGame(getQuestion, ifAnswers, description);

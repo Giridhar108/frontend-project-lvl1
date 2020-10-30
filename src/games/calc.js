@@ -4,7 +4,7 @@ import randomizer from '../../utils/randomizer.js';
 const maxNumbers = 108;
 const foOperandRandom = 9;
 
-export const getCondition = (max = maxNumbers) => {
+export const getQuestion = (max = maxNumbers) => {
   const firstOperand = randomizer(max);
   const secondOperand = randomizer(max);
   const operandRandom = randomizer(foOperandRandom);
@@ -44,4 +44,4 @@ export const ifAnswers = (n, answer) => {
   return result;
 };
 
-export default () => startGame(getCondition, ifAnswers, description);
+export default () => startGame(getQuestion, ifAnswers, description);

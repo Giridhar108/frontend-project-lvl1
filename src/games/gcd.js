@@ -2,7 +2,7 @@ import startGame from '../index.js';
 import randomizer from '../../utils/randomizer.js';
 
 const maxNumber = 108;
-export const getCondition = (max = maxNumber) => {
+export const getQuestion = (max = maxNumber) => {
   const firstNumber = randomizer(max);
   const secondNumber = randomizer(max);
   return `${firstNumber} ${secondNumber}`;
@@ -30,4 +30,4 @@ export const ifAnswers = (numbers, answer) => {
   return result;
 };
 
-export default () => startGame(getCondition, ifAnswers, description);
+export default () => startGame(getQuestion, ifAnswers, description);

@@ -3,7 +3,7 @@ import randomizer from '../../utils/randomizer.js';
 
 const maxNumbers = 108;
 
-export const getCondition = (max = maxNumbers) => randomizer(max);
+export const getQuestion = (max = maxNumbers) => randomizer(max);
 
 export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -21,4 +21,4 @@ export const ifAnswers = (number, answer) => {
   return result;
 };
 
-export default () => startGame(getCondition, ifAnswers, description);
+export default () => startGame(getQuestion, ifAnswers, description);
