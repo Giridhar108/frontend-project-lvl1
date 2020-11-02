@@ -5,19 +5,19 @@ brain-games:
 	npx brain-games
 
 brain-even:
-	node -r esm bin/brain-even.js
+	npx brain-even
 
 brain-calc:
-	node -r esm bin/brain-calc.js
+	npx brain-calc
 
 brain-gcd:
-	node -r esm bin/brain-gcd.js
+	npx brain-gcd
 
 brain-prime:
-	node -r esm bin/brain-prime.js
+	npx brain-prime
 
 brain-progression:
-	node -r esm bin/brain-progression.js
+	npx brain-progression
 
 rec: 
 	asciinema rec

@@ -1,24 +1,18 @@
 import startGame from '../index.js';
-import randomizer from '../../utils/randomizer.js';
+import genRandom from '../utils/genRandom.js';
+import isEven from '../utils/isEven.js';
 
-const maxNumbers = 108;
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export const getQuestion = (max = maxNumbers) => randomizer(max);
-
-export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-export const ifAnswers = (number, answer) => {
-  const result = {};
-
-  if (answer === (number % 2 === 0 ? 'yes' : 'no')) {
-    result.bool = true;
-    result.answer = 'yes';
-    return result;
+const getQuestionAndAnswer = () => {
+  const container = {};
+  container.question = genRandom();
+  if (isEven(container.question)) {
+    container.answer = 'yes';
+  } else {
+    container.answer = 'no';
   }
-  result.bool = false;
-  result.answer = 'no';
-
-  return result;
+  return container;
 };
 
-export default () => startGame(getQuestion, ifAnswers, description);
+export default () => startGame(getQuestionAndAnswer, description);
