@@ -7,40 +7,40 @@
 
 #### Brain-progression. Victory
 
-[![asciicast](https://asciinema.org/a/xELFnJZ1VdMx0d1KsBmkMgXQI.svg)](https://asciinema.org/a/xELFnJZ1VdMx0d1KsBmkMgXQI)
+[![asciicast](https://asciinema.org/a/PYUAUBvCfRxP23g5agdWWsPaW.svg)](https://asciinema.org/a/PYUAUBvCfRxP23g5agdWWsPaW)
 
 #### Brain-progression. Failure
 
-[![asciicast](https://asciinema.org/a/cWVvx88exQuwzCGT91NM7fxfX.svg)](https://asciinema.org/a/cWVvx88exQuwzCGT91NM7fxfX)
+[![asciicast](https://asciinema.org/a/ANXAHOVQn6gbNt3TDGl2fTUcF.svg)](https://asciinema.org/a/ANXAHOVQn6gbNt3TDGl2fTUcF)
 
 #### Brain-prime. Victory
 
-[![asciicast](https://asciinema.org/a/qsnyqY74PPVXmwkcdqC2GrMa3.svg)](https://asciinema.org/a/qsnyqY74PPVXmwkcdqC2GrMa3)
+[![asciicast](https://asciinema.org/a/zmX7uFm3erLJOdPe5P1TpATnV.svg)](https://asciinema.org/a/zmX7uFm3erLJOdPe5P1TpATnV)
 
 #### Brain-prime. Failure
 
-[![asciicast](https://asciinema.org/a/Xbdt0nZ2Dvmx5L3FDG3dBlZ2H.svg)](https://asciinema.org/a/Xbdt0nZ2Dvmx5L3FDG3dBlZ2H)
+[![asciicast](https://asciinema.org/a/TJmWJnNAfWalMsOJFUylFniUF.svg)](https://asciinema.org/a/TJmWJnNAfWalMsOJFUylFniUF)
 
 #### Brain-gcd. Victory
 
-[![asciicast](https://asciinema.org/a/Y5xZFiih8MHCCazInfC1fN9ay.svg)](https://asciinema.org/a/Y5xZFiih8MHCCazInfC1fN9ay)
+[![asciicast](https://asciinema.org/a/U6HvfGGgWzeyyNRqo3eWVFYPp.svg)](https://asciinema.org/a/U6HvfGGgWzeyyNRqo3eWVFYPp)
 
 #### Brain-gcd. Failure
 
-[![asciicast](https://asciinema.org/a/9kJrAuwwabG2x4ifLR3aXQSRq.svg)](https://asciinema.org/a/9kJrAuwwabG2x4ifLR3aXQSRq)
+[![asciicast](https://asciinema.org/a/JANw8TpdlIn5keeKFI88XFfsX.svg)](https://asciinema.org/a/JANw8TpdlIn5keeKFI88XFfsX)
 
 #### Brain-even. Victory
 
-[![asciicast](https://asciinema.org/a/7qN75oAaMSOBUVSwUUcIPCRAZ.svg)](https://asciinema.org/a/7qN75oAaMSOBUVSwUUcIPCRAZ)
+[![asciicast](https://asciinema.org/a/PxR3366DMA1W4226a9vuMKVY9.svg)](https://asciinema.org/a/PxR3366DMA1W4226a9vuMKVY9)
 
 #### Brain-even. Failure
 
-[![asciicast](https://asciinema.org/a/QXa9wJh7cIHfBJYP9GIRmv8ty.svg)](https://asciinema.org/a/QXa9wJh7cIHfBJYP9GIRmv8ty)
+[![asciicast](https://asciinema.org/a/C1M1sNwpd7C8LK0rBJ0SHytkz.svg)](https://asciinema.org/a/C1M1sNwpd7C8LK0rBJ0SHytkz)
 
 #### Brain-calc. Victory
 
-[![asciicast](https://asciinema.org/a/DeNBJTBAfR5LcNbQXgesS6ikk.svg)](https://asciinema.org/a/DeNBJTBAfR5LcNbQXgesS6ikk)
+[![asciicast](https://asciinema.org/a/FxGNrQY8WmCSVtDVzvwiuXxAN.svg)](https://asciinema.org/a/FxGNrQY8WmCSVtDVzvwiuXxAN)
 
 #### Brain-calc. Failure 
 
-[![asciicast](https://asciinema.org/a/D8dDMfBtR8bh3ptevxbnwa6XJ.svg)](https://asciinema.org/a/D8dDMfBtR8bh3ptevxbnwa6XJ)
+[![asciicast](https://asciinema.org/a/39LgSKrs7mjWHOxN14DkSGW7X.svg)](https://asciinema.org/a/39LgSKrs7mjWHOxN14DkSGW7X)
