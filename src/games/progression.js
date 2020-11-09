@@ -6,17 +6,17 @@ const maxNumber = 10;
 const stepAndLengthNumbers = 8;
 const minStep = 2;
 const minLength = 5;
-const minPosition = 3
+const minPosition = 3;
 const getQuestionAndAnswer = () => {
   const container = {};
   const firstNumberProgression = genRandom(0, maxNumber);
   const stepProgression = genRandom(0, stepAndLengthNumbers) + minStep;
   const length = genRandom(0, stepAndLengthNumbers) + minLength;
-  const varyablePosition = genRandom(minPosition, length)
+  const varyablePosition = genRandom(minPosition, length);
 
   const result = getProgression(firstNumberProgression, stepProgression, length);
-  container.answerFromGame = result[varyablePosition].toString()
-  result[varyablePosition] = '..'
+  container.answerFromGame = result[varyablePosition].toString();
+  result[varyablePosition] = '..';
   container.question = result.join(' ');
   return container;
 };

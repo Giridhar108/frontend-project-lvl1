@@ -5,8 +5,8 @@ import isRrime from '../utils/isPrime.js';
 const getQuestionAndAnswer = () => {
   const container = {};
   container.question = genRandom(2, 72);
-  container.answerFromGame = isRrime(container.question) ? 'yes': 'no'
-  
+  container.answerFromGame = isRrime(container.question) ? 'yes' : 'no';
+
   return container;
 };
 

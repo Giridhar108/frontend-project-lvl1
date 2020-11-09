@@ -7,7 +7,7 @@ export default async function startGame(getQuestionAndAnswer, description) {
   const round = 2;
 
   for (let i = 0; i <= round; i += 1) {
-    const {question, answerFromGame} = getQuestionAndAnswer();
+    const { question, answerFromGame } = getQuestionAndAnswer();
     console.log(`Question ${question}`);
     const answer = await promptly.prompt('You answer:');
     if (answer === answerFromGame) {

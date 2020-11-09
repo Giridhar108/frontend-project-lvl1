@@ -11,11 +11,11 @@ const getQuestionAndAnswer = () => {
   const secondOperand = genRandom(0, maxNumbers);
   const operandRandom = genRandom(0, forOperandRandom);
 
-  const operators = ['*', '+', '-']
-  let operator = operators[operandRandom];
+  const operators = ['*', '+', '-'];
+  const operator = operators[operandRandom];
 
   container.question = `${firstOperand} ${operator} ${secondOperand}`;
-  container.answerFromGame = calculate(firstOperand, secondOperand, operator)
+  container.answerFromGame = calculate(firstOperand, secondOperand, operator);
 
   return container;
 };
