@@ -7,11 +7,8 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const getQuestionAndAnswer = () => {
   const container = {};
   container.question = genRandom();
-  if (isEven(container.question)) {
-    container.answer = 'yes';
-  } else {
-    container.answer = 'no';
-  }
+  container.answerFromGame = isEven(container.question) ? 'yes' : 'no';
+
   return container;
 };
 

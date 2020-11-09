@@ -1,6 +1,6 @@
-const mygcd = (oneV, twoZ) => {
-  if (twoZ) { return mygcd(twoZ, oneV % twoZ); }
-  return oneV;
+const findGcd = (number1, number2) => {
+  if (number2) { return mygcd(number2, number1 % number2); }
+  return number1;
 };
 
-export default mygcd;
+export default findGcd;

@@ -8,7 +8,7 @@ const getQuestionAndAnswer = () => {
   const secondNumber = genRandom();
   container.question = `${firstNumber} ${secondNumber}`;
 
-  container.answer = isGcd(firstNumber, secondNumber).toString();
+  container.answerFromGame = isGcd(firstNumber, secondNumber).toString();
 
   return container;
 };

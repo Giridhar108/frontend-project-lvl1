@@ -1,37 +1,23 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
+import getProgression from '../utils/getProgression.js';
 
 const maxNumber = 10;
 const stepAndLengthNumbers = 8;
 const minStep = 2;
 const minLength = 5;
-
+const minPosition = 3
 const getQuestionAndAnswer = () => {
   const container = {};
-  const arr = [];
-  const firstNumberArr = genRandom(0, maxNumber);
-  const stepArray = genRandom(0, stepAndLengthNumbers) + minStep;
+  const firstNumberProgression = genRandom(0, maxNumber);
+  const stepProgression = genRandom(0, stepAndLengthNumbers) + minStep;
   const length = genRandom(0, stepAndLengthNumbers) + minLength;
+  const varyablePosition = genRandom(minPosition, length)
 
-  while (arr.length <= length) {
-    arr.push(firstNumberArr);
-  }
-
-  const prog = (array, y) => {
-    let step = y;
-    const forEslintArray = array;
-    for (let i = 0; i < array.length; i += 1) {
-      forEslintArray[i] += step;
-      step += y;
-    }
-    return forEslintArray;
-  };
-
-  const result = prog(arr, stepArray);
-  const variableLength = result[length - 3];
-
-  container.answer = variableLength.toString();
-  container.question = result.join(' ').replace(variableLength, '..');
+  const result = getProgression(firstNumberProgression, stepProgression, length);
+  container.answerFromGame = result[varyablePosition].toString()
+  result[varyablePosition] = '..'
+  container.question = result.join(' ');
   return container;
 };
 

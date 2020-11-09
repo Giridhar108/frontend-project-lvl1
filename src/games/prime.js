@@ -1,15 +1,12 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
-import isRprime from '../utils/isPrime.js';
+import isRrime from '../utils/isPrime.js';
 
 const getQuestionAndAnswer = () => {
   const container = {};
   container.question = genRandom(2, 72);
-  if (isRprime(container.question)) {
-    container.answer = 'yes';
-  } else {
-    container.answer = 'no';
-  }
+  container.answerFromGame = isRrime(container.question) ? 'yes': 'no'
+  
   return container;
 };
 
