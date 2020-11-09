@@ -1,11 +1,24 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
-import isRrime from '../utils/isPrime.js';
+
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
+  const maxDivider = Math.sqrt(num);
+  for (let divider = 2; divider <= maxDivider; divider += 1) {
+    if (num % divider === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const getQuestionAndAnswer = () => {
   const container = {};
   container.question = genRandom(2, 72);
-  container.answerFromGame = isRrime(container.question) ? 'yes' : 'no';
+  container.answerFromGame = isPrime(container.question) ? 'yes' : 'no';
 
   return container;
 };

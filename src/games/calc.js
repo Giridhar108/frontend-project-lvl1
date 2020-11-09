@@ -1,6 +1,18 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
-import calculate from '../utils/calculate.js';
+
+const calculate = (operand1, operand2, operator) => {
+  switch (operator) {
+    case '*':
+      return (operand1 * operand2).toString();
+    case '+':
+      return (operand1 + operand2).toString();
+    case '-':
+      return (operand1 - operand2).toString();
+    default:
+      throw new Error(`Unknown order state: '${operator}'!`);
+  }
+};
 
 const maxNumbers = 108;
 const forOperandRandom = 2;

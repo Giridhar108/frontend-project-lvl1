@@ -13,7 +13,8 @@ export default async function startGame(getQuestionAndAnswer, description) {
     if (answer === answerFromGame) {
       console.log('correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerFromGame}'.\nLet's try again, ${namePlayer}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerFromGame}'.\nLet's try again, ${namePlayer}!`);
+      return;
     }
   }
   console.log(`Congratulations, ${namePlayer}!`);

@@ -1,6 +1,10 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
-import isGcd from '../utils/isGcd.js';
+
+const findGcd = (number1, number2) => {
+  if (number2) { return findGcd(number2, number1 % number2); }
+  return number1;
+};
 
 const getQuestionAndAnswer = () => {
   const container = {};
@@ -8,7 +12,7 @@ const getQuestionAndAnswer = () => {
   const secondNumber = genRandom();
   container.question = `${firstNumber} ${secondNumber}`;
 
-  container.answerFromGame = isGcd(firstNumber, secondNumber).toString();
+  container.answerFromGame = findGcd(firstNumber, secondNumber).toString();
 
   return container;
 };

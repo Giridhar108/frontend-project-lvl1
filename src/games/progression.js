@@ -1,12 +1,22 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
-import getProgression from '../utils/getProgression.js';
+
+const getProgression = (startNumber, step, length) => {
+  const progression = [startNumber];
+  let constanta = step;
+  for (let i = 0; i < length; i += 1) {
+    progression.push(startNumber + constanta);
+    constanta += step;
+  }
+  return progression;
+};
 
 const maxNumber = 10;
 const stepAndLengthNumbers = 8;
 const minStep = 2;
 const minLength = 5;
 const minPosition = 3;
+
 const getQuestionAndAnswer = () => {
   const container = {};
   const firstNumberProgression = genRandom(0, maxNumber);
