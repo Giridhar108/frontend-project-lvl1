@@ -16,11 +16,10 @@ const isPrime = (num) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const container = {};
-  container.question = genRandom(2, 72);
-  container.answerFromGame = isPrime(container.question) ? 'yes' : 'no';
+  const question = genRandom(2, 72);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return container;
+  return { question, rightAnswer };
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';

@@ -15,21 +15,18 @@ const calculate = (operand1, operand2, operator) => {
 };
 
 const maxNumbers = 108;
-const forOperandRandom = 2;
+const operators = ['*', '+', '-'];
 
 const getQuestionAndAnswer = () => {
-  const container = {};
   const firstOperand = genRandom(0, maxNumbers);
   const secondOperand = genRandom(0, maxNumbers);
-  const operandRandom = genRandom(0, forOperandRandom);
 
-  const operators = ['*', '+', '-'];
-  const operator = operators[operandRandom];
+  const operator = operators[genRandom(0, operators.length - 1)];
 
-  container.question = `${firstOperand} ${operator} ${secondOperand}`;
-  container.answerFromGame = calculate(firstOperand, secondOperand, operator);
+  const question = `${firstOperand} ${operator} ${secondOperand}`;
+  const rightAnswer = calculate(firstOperand, secondOperand, operator);
 
-  return container;
+  return { question, rightAnswer };
 };
 
 const description = 'What is the result of the expression?';

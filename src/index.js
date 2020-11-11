@@ -4,16 +4,16 @@ export default async function startGame(getQuestionAndAnswer, description) {
   const namePlayer = await promptly.prompt('May I have your name?');
   console.log(`Nice to meet you, ${namePlayer}`);
   console.log(description);
-  const round = 2;
+  const roundsCount = 2;
 
-  for (let i = 0; i <= round; i += 1) {
-    const { question, answerFromGame } = getQuestionAndAnswer();
+  for (let i = 0; i <= roundsCount; i += 1) {
+    const { question, rightAnswer } = getQuestionAndAnswer();
     console.log(`Question ${question}`);
     const answer = await promptly.prompt('You answer:');
-    if (answer === answerFromGame) {
+    if (answer === rightAnswer) {
       console.log('correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answerFromGame}'.\nLet's try again, ${namePlayer}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${namePlayer}!`);
       return;
     }
   }

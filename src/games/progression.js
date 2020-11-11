@@ -1,34 +1,34 @@
 import startGame from '../index.js';
 import genRandom from '../utils/genRandom.js';
 
-const getProgression = (startNumber, step, length) => {
-  const progression = [startNumber];
-  let constanta = step;
-  for (let i = 0; i < length; i += 1) {
-    progression.push(startNumber + constanta);
-    constanta += step;
-  }
-  return progression;
+const genProgression = (firstTerm, step, length) => {
+  const iter = (currentTerm, acc) => {
+    if (acc.length === length) {
+      return acc;
+    }
+
+    return iter(currentTerm + step, [...acc, currentTerm]);
+  };
+
+  return iter(firstTerm, []);
 };
 
 const maxNumber = 10;
-const stepAndLengthNumbers = 8;
-const minStep = 2;
-const minLength = 5;
-const minPosition = 3;
+const stepAndLengthNumber = 8;
+const minPosition = 2;
+const minlength = 5;
 
 const getQuestionAndAnswer = () => {
-  const container = {};
-  const firstNumberProgression = genRandom(0, maxNumber);
-  const stepProgression = genRandom(0, stepAndLengthNumbers) + minStep;
-  const length = genRandom(0, stepAndLengthNumbers) + minLength;
-  const varyablePosition = genRandom(minPosition, length);
+  const firstNumber = genRandom(0, maxNumber);
+  const step = genRandom(1, stepAndLengthNumber);
+  const length = genRandom(minlength, stepAndLengthNumber);
+  const hidenElement = genRandom(minPosition, length - 1);
 
-  const result = getProgression(firstNumberProgression, stepProgression, length);
-  container.answerFromGame = result[varyablePosition].toString();
-  result[varyablePosition] = '..';
-  container.question = result.join(' ');
-  return container;
+  const progression = genProgression(firstNumber, step, length);
+  const rightAnswer = progression[hidenElement].toString();
+  progression[hidenElement] = '..';
+  const question = progression.join(' ');
+  return { question, rightAnswer };
 };
 
 const description = 'What number is missing in the progression?';

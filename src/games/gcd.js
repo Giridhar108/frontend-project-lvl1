@@ -7,14 +7,13 @@ const findGcd = (number1, number2) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const container = {};
-  const firstNumber = genRandom();
-  const secondNumber = genRandom();
-  container.question = `${firstNumber} ${secondNumber}`;
+  const number1 = genRandom();
+  const number2 = genRandom();
+  const question = `${number1} ${number2}`;
 
-  container.answerFromGame = findGcd(firstNumber, secondNumber).toString();
+  const rightAnswer = findGcd(number1, number2).toString();
 
-  return container;
+  return { question, rightAnswer };
 };
 
 const description = 'Find the greatest common divisor of given numbers.';

@@ -5,11 +5,10 @@ const isEven = (number) => number % 2 === 0;
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  const container = {};
-  container.question = genRandom();
-  container.answerFromGame = isEven(container.question) ? 'yes' : 'no';
+  const question = genRandom();
+  const rightAnswer = isEven(question) ? 'yes' : 'no';
 
-  return container;
+  return { question, rightAnswer };
 };
 
 export default () => startGame(getQuestionAndAnswer, description);
