@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import genRandom from '../utils/genRandom.js';
+import genRandom from '../utils.js';
 
 const isPrime = (num) => {
   if (num < 2) {

@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import genRandom from '../utils/genRandom.js';
+import genRandom from '../utils.js';
 
 const findGcd = (number1, number2) => {
   if (number2) { return findGcd(number2, number1 % number2); }
