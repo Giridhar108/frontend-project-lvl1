@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/33e175a02cf339b2bb95/maintainability)](https://codeclimate.com/github/Giridhar108/frontend-project-lvl1/maintainability)
 
 
-Для установки программы склонируйте репозиторий к себе на компьютер
+Cклонируйте репозиторий к себе на компьютер
 
 > git clone https://github.com/Giridhar108/frontend-project-lvl1.git
 
