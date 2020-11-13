@@ -14,7 +14,7 @@ const genProgression = (firstTerm, step, length) => {
 };
 
 const maxNumber = 10;
-const maxLength= 8;
+const maxLength = 8;
 const maxStep = 8;
 const minPosition = 2;
 const minLength = 5;
@@ -26,8 +26,8 @@ const getQuestionAndAnswer = () => {
   const indexHidenElement = genRandom(minPosition, length - 1);
 
   const progression = genProgression(firstNumber, step, length);
-  const rightAnswer = progression[indexHidenElement ].toString();
-  progression[indexHidenElement ] = '..';
+  const rightAnswer = progression[indexHidenElement].toString();
+  progression[indexHidenElement] = '..';
   const question = progression.join(' ');
   return { question, rightAnswer };
 };
